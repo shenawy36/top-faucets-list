@@ -186,25 +186,30 @@
            ========================================= */
         async function fetchCryptoPrices() {
             try {
-                // جلب بيانات أهم 10 عملات من API مجاني وسريع
-                const response = await fetch('https://api.coincap.io/v2/assets?limit=10');
+                // جلب أسعار أهم 10 عملات من منصة بينانس
+                const symbols = '["BTCUSDT","ETHUSDT","BNBUSDT","SOLUSDT","XRPUSDT","ADAUSDT","DOGEUSDT","TRXUSDT","LINKUSDT","LTCUSDT"]';
+                const response = await fetch(`https://api.binance.com/api/v3/ticker/24hr?symbols=${encodeURIComponent(symbols)}`);
                 const data = await response.json();
                 
                 let tickerHtml = '';
-                data.data.forEach(coin => {
-                    const price = parseFloat(coin.priceUsd).toFixed(4);
-                    const change = parseFloat(coin.changePercent24Hr).toFixed(2);
+                data.forEach(coin => {
+                    const symbol = coin.symbol.replace('USDT', '');
+                    const rawPrice = parseFloat(coin.lastPrice);
+                    // تنسيق السعر: 4 أرقام عشرية للعملات الرخيصة، ورقمين للغالية
+                    const price = rawPrice < 1 ? rawPrice.toFixed(4) : rawPrice.toFixed(2);
+                    const change = parseFloat(coin.priceChangePercent).toFixed(2);
                     const colorClass = change >= 0 ? 'text-green-400' : 'text-red-400';
                     const arrow = change >= 0 ? '▲' : '▼';
                     
-                    tickerHtml += `<span class="mx-6 font-semibold">${coin.symbol}: <span class="text-white">$${price}</span> <span class="${colorClass}">${arrow} ${Math.abs(change)}%</span></span> • `;
+                    tickerHtml += `<span class="mx-6 font-semibold">${symbol}: <span class="text-white">$${price}</span> <span class="${colorClass}">${arrow} ${Math.abs(change)}%</span></span> • `;
                 });
 
                 // تكرار الكود لضمان سلاسة حركة الشريط (Marquee Effect)
-                const finalHtml = tickerHtml + tickerHtml + tickerHtml;
+                const finalHtml = tickerHtml + tickerHtml + tickerHtml + tickerHtml;
                 document.getElementById('crypto-ticker').innerHTML = finalHtml;
             } catch (error) {
-                document.getElementById('crypto-ticker').innerHTML = '<span class="px-4">Market data temporarily unavailable.</span>';
+                console.error("Error fetching prices:", error);
+                document.getElementById('crypto-ticker').innerHTML = '<span class="px-4 text-gray-400">Live prices paused. Please disable Adblocker to view market data.</span>';
             }
         }
         fetchCryptoPrices();
