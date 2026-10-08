@@ -3,59 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Crypto Faucets 2026 | Trusted & Paying</title>
+    <title>Best Crypto Earning Platforms 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-gray-50 text-gray-800 pb-16">
 
     <!-- Header -->
-    <header class="bg-indigo-700 text-white text-center py-10 shadow-md">
-        <h1 class="text-3xl md:text-4xl font-bold mb-3">Top Trusted Crypto Earning Platforms</h1>
-        <p class="text-indigo-200 text-lg">A personally curated list of tested and consistently paying sites.</p>
+    <header class="bg-slate-900 text-white text-center py-12 shadow-lg">
+        <h1 class="text-3xl md:text-5xl font-bold mb-4">Top Trusted Crypto Platforms</h1>
+        <p class="text-slate-300 text-lg max-w-2xl mx-auto px-4">A carefully curated list of the highest-paying and most reliable Faucet and PTC platforms.</p>
     </header>
 
-    <!-- Sites Container -->
-    <main class="max-w-5xl mx-auto mt-10 p-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="sites-list">
-            
-            <!-- Faucet Card 1 (Template) -->
-            <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-200">
-                <div class="flex items-center justify-between mb-4">
-                    <h2 class="text-2xl font-bold text-gray-900">Site Name</h2>
-                    <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Verified Paying</span>
-                </div>
-                <ul class="text-gray-600 mb-6 space-y-2 text-sm">
-                    <li>✔️ <strong>Withdrawal:</strong> FaucetPay</li>
-                    <li>✔️ <strong>Tasks:</strong> Captcha, Shortlinks, PTC</li>
-                    <li>✔️ <strong>Min Payout:</strong> No Minimum</li>
-                </ul>
-                <a href="YOUR_REFERRAL_LINK_HERE" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg transition-colors">
-                    Join & Start Earning
-                </a>
+    <main class="max-w-6xl mx-auto mt-12 p-4">
+        
+        <!-- Faucets Section -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 border-b-2 border-indigo-500 pb-2 mb-6 inline-block">🏆 High Paying Faucets</h2>
+            <div id="faucets-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Faucet cards will be injected here -->
             </div>
-
-            <!-- Faucet Card 2 (Placeholder for your site) -->
-            <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-200">
-                <div class="flex items-center justify-between mb-4">
-                    <h2 class="text-2xl font-bold text-gray-900">Another Faucet</h2>
-                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">High Reward</span>
-                </div>
-                <ul class="text-gray-600 mb-6 space-y-2 text-sm">
-                    <li>✔️ <strong>Withdrawal:</strong> Direct Wallet / FaucetPay</li>
-                    <li>✔️ <strong>Tasks:</strong> Offerwalls, Daily Bonus</li>
-                    <li>✔️ <strong>Min Payout:</strong> Low Minimum</li>
-                </ul>
-                <a href="YOUR_REFERRAL_LINK_HERE" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg transition-colors">
-                    Join & Start Earning
-                </a>
-            </div>
-
         </div>
+
+        <!-- PTC Section -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 border-b-2 border-blue-500 pb-2 mb-6 inline-block">🖱️ Best PTC (Paid To Click) Sites</h2>
+            <div id="ptc-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- PTC cards will be injected here -->
+            </div>
+        </div>
+
     </main>
 
+    <script>
+        // دالة فتح الرابط لإخفائه من شريط المتصفح
+        function openLink(url) {
+            window.open(url, '_blank', 'noopener,noreferrer');
+        }
+
+        // قاعدة بيانات المواقع الخاصة بك
+        const sites = [
+            // ================= FAUCETS =================
+            {
+                name: "Payffer",
+                domain: "payffer.com",
+                url: "https://payffer.com/?r=efad134419f988a92ff32cbe",
+                type: "faucet",
+                highlight: true, // تفعيل التمييز لموقعك
+                badge: "🔥 Hot & Fast Paying",
+                features: ["Instant FaucetPay", "High Rates", "Daily Bonus"]
+            },
+            { name: "FireFaucet", domain: "firefaucet.win", url: "https://firefaucet.win/ref/153489", type: "faucet", badge: "Trusted", features: ["Auto Faucet", "Level System", "Multiple Coins"] },
+            { name: "VieFaucet", domain: "viefaucet.com", url: "https://viefaucet.com?r=682fcc8047fd0404ab18ca39", type: "faucet", badge: "Solid", features: ["Instant Withdraw", "PTC & Offerwalls", "Low Minimum"] },
+            { name: "FaucetCrypto", domain: "faucetcrypto.com", url: "https://faucetcrypto.com/r/556693", type: "faucet", badge: "Popular", features: ["Direct Wallet", "RPG Elements", "20+ Coins"] },
+            { name: "DutchyCorp", domain: "autofaucet.dutchycorp.space", url: "https://autofaucet.dutchycorp.space/?r=thekayser", type: "faucet", badge: "Massive", features: ["70+ Cryptos", "Auto Claim", "Staking"] },
+            { name: "AutoFaucet", domain: "autofaucet.org", url: "https://autofaucet.org/r/thekayser", type: "faucet", badge: "Reliable", features: ["Custom Mining", "Instant Payouts", "Exchange"] },
+            { name: "FaucetPay", domain: "faucetpay.io", url: "https://faucetpay.io/r/833226", type: "faucet", badge: "Essential", features: ["Micro-Wallet", "Built-in PTC", "Swap Coins"] },
+            { name: "Cointiply", domain: "cointiply.mobi", url: "https://cointiply.mobi/pk76m", type: "faucet", badge: "Top Tier", features: ["High Earning", "Interest on Balance", "Mobile App"] },
+            { name: "EarnBitMoon", domain: "earnbitmoon.club", url: "https://earnbitmoon.club/?ref=91582", type: "faucet", badge: "Verified", features: ["Claim every 5 mins", "Contests", "Fast Support"] },
+            { name: "FreeSolana", domain: "freesolana.top", url: "https://freesolana.top/?r=160257", type: "faucet", badge: "Solana Focus", features: ["SOL Rewards", "Simple UI", "Fast Payout"] },
+            { name: "Aruble", domain: "aruble.net", url: "https://aruble.net/?ref=88B2894935", type: "faucet", badge: "New", features: ["FaucetPay", "Tasks", "Multi-Coin"] },
+            { name: "Faucet Gold", domain: "faucet.gold", url: "https://faucet.gold/r/25143", type: "faucet", badge: "Verified", features: ["Gold Rewards", "Crypto Exchange", "Instant"] },
+            { name: "Coin101Coin", domain: "coin101coin.com", url: "https://coin101coin.com/register.php?ref=02F2C0A8", type: "faucet", badge: "Steady", features: ["Classic Faucet", "Offerwalls", "PTC Ads"] },
+            
+            // ================= PTC SITES =================
+            { name: "RewardJoy", domain: "rewardjoy.com", url: "https://www.rewardjoy.com/?r=thekayser", type: "ptc", badge: "Easy Tasks", features: ["View Ads", "High Rewards", "Fast Cashout"] },
+            { name: "FaucetPayz", domain: "faucetpayz.com", url: "https://faucetpayz.com/ref/thekayser", type: "ptc", badge: "Direct FP", features: ["FaucetPay Linked", "Simple Clicks", "Low Limit"] },
+            { name: "adBTC", domain: "adbtc.top", url: "https://r.adbtc.top/3712530", type: "ptc", badge: "Best for BTC", features: ["Surf for Satoshis", "Active Market", "Very Reliable"] },
+            { name: "BTCAdSpace", domain: "btcadspace.com", url: "https://btcadspace.com/ref/thekayser", type: "ptc", badge: "Paying", features: ["View Ads", "Revenue Share", "Bitcoin Payouts"] }
+        ];
+
+        const faucetsContainer = document.getElementById('faucets-container');
+        const ptcContainer = document.getElementById('ptc-container');
+
+        sites.forEach(site => {
+            // جلب اللوجو تلقائياً من جوجل
+            const logoUrl = `https://www.google.com/s2/favicons?domain=${site.domain}&sz=64`;
+            
+            // تصميم كارت موقعك المميز مقابل المواقع الأخرى
+            const cardStyle = site.highlight 
+                ? "bg-indigo-50 border-2 border-indigo-500 shadow-md scale-105 transform hover:-translate-y-1 relative" 
+                : "bg-white border border-gray-200 shadow-sm hover:shadow-lg hover:-translate-y-1";
+            
+            const badgeStyle = site.highlight
+                ? "bg-indigo-600 text-white"
+                : "bg-green-100 text-green-800";
+
+            const btnStyle = site.highlight
+                ? "bg-indigo-600 hover:bg-indigo-700 shadow-lg shadow-indigo-500/30 text-white"
+                : "bg-slate-800 hover:bg-slate-900 text-white";
+
+            const cardHTML = `
+                <div class="rounded-xl transition-all duration-300 p-6 ${cardStyle}">
+                    ${site.highlight ? '<div class="absolute -top-3 -right-3 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full animate-bounce">Top Pick</div>' : ''}
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="${logoUrl}" alt="${site.name} Logo" class="w-10 h-10 rounded-full bg-white p-1 border border-gray-200 shadow-sm" loading="lazy">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">${site.name}</h3>
+                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full uppercase tracking-wide ${badgeStyle}">${site.badge}</span>
+                        </div>
+                    </div>
+                    <ul class="text-gray-600 mb-6 space-y-2 text-sm ml-1">
+                        ${site.features.map(f => `<li><span class="text-green-500 mr-2">✓</span>${f}</li>`).join('')}
+                    </ul>
+                    <!-- الزر يستدعي دالة JavaScript لفتح الرابط بدون إظهاره -->
+                    <button onclick="openLink('${site.url}')" class="w-full font-semibold py-2.5 px-4 rounded-lg transition-colors duration-200 ${btnStyle}">
+                        Start Earning Now
+                    </button>
+                </div>
+            `;
+
+            if (site.type === 'faucet') {
+                faucetsContainer.innerHTML += cardHTML;
+            } else {
+                ptcContainer.innerHTML += cardHTML;
+            }
+        });
+    </script>
 </body>
 </html>
